@@ -1,7 +1,7 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   background-color: #000; }
 
@@ -13,7 +13,7 @@ html {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
-  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #000; }
   .navbar-custom .navbar-toggle {
     padding: 4px 6px;
@@ -29,6 +29,8 @@ html {
     color: #fff; }
   .navbar-custom .nav li a {
     -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out; }
     .navbar-custom .nav li a:hover {
       color: rgba(255, 255, 255, 0.8);
@@ -43,17 +45,139 @@ html {
       background-color: rgba(255, 255, 255, 0.3); }
       .navbar-custom .nav li.active a:hover {
         color: #fff; }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .navbar-custom {
       padding: 20px 0;
       border-bottom: none;
       letter-spacing: 1px;
       background: transparent;
-      -webkit-transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
-      transition: background 0.5s ease-in-out,padding 0.5s ease-in-out; }
+      -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+      -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+      -o-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+      transition: background 0.5s ease-in-out, padding 0.5s ease-in-out; }
       .navbar-custom.top-nav-collapse {
         padding: 0;
         background: #000;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3); } }
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .landing .landing-banner {
+    display: table;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    color: white;
+    background: url(../images/landing/intro-bg.jpg) no-repeat bottom center scroll;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    .landing .landing-banner .container {
+      display: table-cell;
+      vertical-align: middle; }
+      .landing .landing-banner .container .landing-title {
+        font-size: 25px;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .landing .landing-menu-blocks {
+    height: 50%; }
+    .landing .landing-menu-blocks .container, .landing .landing-menu-blocks .row {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0; }
+    .landing .landing-menu-blocks .blocks-container-center {
+      height: 50%;
+      padding: 0;
+      display: table; }
+      .landing .landing-menu-blocks .blocks-container-center .block-content {
+        cursor: pointer;
+        display: table-cell;
+        vertical-align: middle; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content.block-surfboards {
+          background: url("../images/landing/shop-surfboards.jpg") no-repeat center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content.block-skateboards {
+          background: url("../images/landing/shop-skateboards.jpg") no-repeat center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content.block-wetsuits {
+          background: url("../images/landing/shop-wetsuits.jpg") no-repeat center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content.block-rentals {
+          background: url("../images/landing/shop-rentals.jpg") no-repeat center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie {
+          font-size: 14px;
+          text-transform: uppercase;
+          padding-left: 10px;
+          color: #fff;
+          font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          text-align: center;
+          -webkit-transition: all 0.5s ease 0s;
+          -moz-transition: all 0.5s ease 0s;
+          -o-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content .btn-custom {
+          display: none; }
+  @media only screen and (min-width: 769px) {
+    .landing .landing-banner {
+      height: 70%; }
+      .landing .landing-banner .container .landing-title {
+        font-size: 30px; }
+    .landing .landing-menu-blocks {
+      height: 30%; }
+      .landing .landing-menu-blocks .blocks-container-center {
+        height: 100%; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content {
+          -webkit-filter: grayscale(0);
+          -moz-filter: grayscale(0);
+          filter: grayscale(0);
+          -webkit-transition: all 0.5s ease 0s;
+          -moz-transition: all 0.5s ease 0s;
+          -o-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s; }
+          .landing .landing-menu-blocks .blocks-container-center .block-content:hover {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            filter: grayscale(100%); }
+            .landing .landing-menu-blocks .blocks-container-center .block-content:hover .block-categorie, .landing .landing-menu-blocks .blocks-container-center .block-content:hover .btn-custom {
+              color: #000; }
+            .landing .landing-menu-blocks .blocks-container-center .block-content:hover .btn-custom {
+              border: 2px solid #000; }
+          .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie {
+            font-size: 16px;
+            min-height: 50px; }
+          .landing .landing-menu-blocks .blocks-container-center .block-content .btn-custom {
+            display: block;
+            max-width: 70px;
+            margin: 0 auto;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 12px;
+            font-size: 12px;
+            -webkit-transition: all 0.5s ease 0s;
+            -moz-transition: all 0.5s ease 0s;
+            -o-transition: all 0.5s ease 0s;
+            transition: all 0.5s ease 0s; }
+            .landing .landing-menu-blocks .blocks-container-center .block-content .btn-custom:hover {
+              color: #fff;
+              border: 2px solid #fff; } }
 
 /*# sourceMappingURL=style.css.map */

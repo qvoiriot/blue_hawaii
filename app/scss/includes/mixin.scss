@@ -1,0 +1,97 @@
+@mixin grayscale($value) {
+    -webkit-filter: #{"grayscale(#{$value})"};
+    -moz-filter: #{"grayscale(#{$value})"};
+    filter:#{"grayscale(#{$value})"};
+}
+
+@mixin box-sizing() {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+@mixin cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@mixin contain() {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+@mixin opacity($alpha) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$alpha*100)";
+  filter:alpha(opacity=$alpha*100);
+  -webkit-opacity: $alpha;
+  -moz-opacity: $alpha;
+  -khtml-opacity: $alpha;
+  opacity: $alpha;
+}
+@mixin transition($all...) {
+  -webkit-transition: $all;
+  -moz-transition: $all;
+  -o-transition: $all;
+  transition: $all;
+}
+@mixin sku-gradient($start, $end) {
+  background: $start;
+  background: radial-gradient(ellipse at center, $start 50%, $end 100%);
+}
+@mixin transform($t) {
+  -webkit-transform: $t;
+  -moz-transform: $t;
+  -o-transform: $t;
+  -ms-transform: $t;
+  transform: $t;
+}
+@mixin rotate( $degrees ) {
+  -webkit-transform: rotate(#{$degrees}deg);
+  -moz-transform: rotate(#{$degrees}deg);
+  -ms-transform: rotate(#{$degrees}deg);
+  -o-transform: rotate(#{$degrees}deg);
+  transform: rotate(#{$degrees}deg);
+  filter:progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+  zoom: 1;
+}
+@mixin animation( $value... ) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -o-animation: $value;
+  -ms-animation: $value;
+  animation: $value;
+}
+@mixin blur( $px ) {
+  -webkit-filter: blur($px);
+  -moz-filter: blur($px);
+  filter:blur($px);
+}
+@mixin respond-to($media) {
+  @if $media == menu_mobile {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $media == mobile {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @else if $media == mobile_portrait {
+    @media only screen and (orientation: portrait) and (max-width: 768px) {
+      @content;
+    }
+  }
+  @else if $media == mobile_landscape {
+    @media only screen and (orientation: landscape) and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $media == not_mobile {
+    @media only screen and (min-width: 769px) {
+      @content;
+    }
+  }
+}
