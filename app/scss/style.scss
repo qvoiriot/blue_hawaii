@@ -160,14 +160,20 @@ html {
         .block-content {
           @include grayscale(0);
           @include transition(all 0.5s ease 0s);
+          &.block-surfboards, &.block-skateboards, &.block-wetsuits, &.block-rentals {
+            background-size: 150%;
+            background-position: center;
+          }
+          &.block-surfboards {
+            background-position: top center;
+          }
+          &.block-wetsuits {
+            background-position: right;
+          }
           &:hover {
             @include grayscale(100%);
-            .block-categorie, .btn-custom {
-              color: #000;
-            }
-            .btn-custom {
-              border: 2px solid #000;
-            }
+            background-size: 180%;
+
           }
           .block-categorie {
             font-size: 16px;
