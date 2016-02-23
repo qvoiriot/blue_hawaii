@@ -132,8 +132,6 @@ html {
           -moz-transition: all 0.5s ease 0s;
           -o-transition: all 0.5s ease 0s;
           transition: all 0.5s ease 0s; }
-        .landing .landing-menu-blocks .blocks-container-center .block-content .btn-custom {
-          display: none; }
   @media only screen and (min-width: 769px) {
     .landing .landing-banner {
       height: 70%; }
@@ -164,24 +162,6 @@ html {
             filter: grayscale(100%);
             background-size: 180%; }
           .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie {
-            font-size: 16px;
-            min-height: 50px; }
-          .landing .landing-menu-blocks .blocks-container-center .block-content .btn-custom {
-            display: block;
-            max-width: 70px;
-            margin: 0 auto;
-            background: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            line-height: 12px;
-            font-size: 12px;
-            -webkit-transition: all 0.5s ease 0s;
-            -moz-transition: all 0.5s ease 0s;
-            -o-transition: all 0.5s ease 0s;
-            transition: all 0.5s ease 0s; }
-            .landing .landing-menu-blocks .blocks-container-center .block-content .btn-custom:hover {
-              color: #fff;
-              border: 2px solid #fff; } }
+            font-size: 16px; } }
 
 /*# sourceMappingURL=style.css.map */
