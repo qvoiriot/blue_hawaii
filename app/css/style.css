@@ -122,6 +122,7 @@ html {
           -o-background-size: cover;
           background-size: cover; }
         .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie {
+          position: relative;
           font-size: 14px;
           text-transform: uppercase;
           padding-left: 10px;
@@ -156,12 +157,35 @@ html {
             background-position: top center; }
           .landing .landing-menu-blocks .blocks-container-center .block-content.block-wetsuits {
             background-position: right; }
+          .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie {
+            font-size: 16px; }
+            .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie:after {
+              content: '';
+              position: absolute;
+              left: calc(50% - 20px);
+              width: 40px;
+              height: 2px;
+              background: #ffffff;
+              bottom: -5px;
+              -moz-transform: scale(0);
+              -o-transform: scale(0);
+              -ms-transform: scale(0);
+              -webkit-transform: scale(0);
+              transform: scale(0);
+              -webkit-transition: all 0.3s ease 0s;
+              -moz-transition: all 0.3s ease 0s;
+              -o-transition: all 0.3s ease 0s;
+              transition: all 0.3s ease 0s; }
           .landing .landing-menu-blocks .blocks-container-center .block-content:hover {
             -webkit-filter: grayscale(100%);
             -moz-filter: grayscale(100%);
             filter: grayscale(100%);
             background-size: 180%; }
-          .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie {
-            font-size: 16px; } }
+            .landing .landing-menu-blocks .blocks-container-center .block-content:hover .block-categorie::after {
+              -moz-transform: scale(1);
+              -o-transform: scale(1);
+              -ms-transform: scale(1);
+              -webkit-transform: scale(1);
+              transform: scale(1); } }
 
 /*# sourceMappingURL=style.css.map */

@@ -39,22 +39,21 @@
   background: $start;
   background: radial-gradient(ellipse at center, $start 50%, $end 100%);
 }
-@mixin transform($t) {
-  -webkit-transform: $t;
-  -moz-transform: $t;
-  -o-transform: $t;
-  -ms-transform: $t;
-  transform: $t;
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
 }
-@mixin rotate( $degrees ) {
-  -webkit-transform: rotate(#{$degrees}deg);
-  -moz-transform: rotate(#{$degrees}deg);
-  -ms-transform: rotate(#{$degrees}deg);
-  -o-transform: rotate(#{$degrees}deg);
-  transform: rotate(#{$degrees}deg);
-  filter:progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
-  zoom: 1;
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
 }
 @mixin animation( $value... ) {
   -webkit-animation: $value;

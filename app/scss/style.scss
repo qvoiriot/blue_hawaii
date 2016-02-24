@@ -130,6 +130,7 @@ html {
           @include cover();
         }
         .block-categorie {
+          position: relative;
           font-size: 14px;
           text-transform: uppercase;
           padding-left: 10px;
@@ -167,13 +168,27 @@ html {
           &.block-wetsuits {
             background-position: right;
           }
+          .block-categorie {
+            font-size: 16px;
+            &:after {
+              content: '';
+              position: absolute;
+              left: calc(50% - 20px);
+              width: 40px;
+              height: 2px;
+              background: #ffffff;
+              bottom: -5px;
+              @include scale(0);
+              @include transition(all 0.3s ease 0s);
+
+            }
+          }
           &:hover {
             @include grayscale(100%);
             background-size: 180%;
-
-          }
-          .block-categorie {
-            font-size: 16px;
+            .block-categorie::after {
+              @include scale(1);
+            }
           }
         }
       }
