@@ -138,9 +138,6 @@ html {
           text-align: center;
           @include transition(all 0.5s ease 0s);
         }
-        .btn-custom {
-          display: none;
-        }
       }
     }
   }
@@ -177,23 +174,6 @@ html {
           }
           .block-categorie {
             font-size: 16px;
-            min-height: 50px;
-          }
-          .btn-custom {
-            display: block;
-            max-width: 70px;
-            margin: 0 auto;
-            background: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-            font-family: $montserrat;
-            line-height: 12px;
-            font-size: 12px;
-            @include transition(all 0.5s ease 0s);
-            &:hover {
-              color: #fff;
-              border: 2px solid #fff;
-            }
           }
         }
       }
