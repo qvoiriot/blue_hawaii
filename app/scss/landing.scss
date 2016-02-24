@@ -1,0 +1,127 @@
+@import "variables";
+@import "includes/media-queries";
+@import "includes/mixin";
+
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .landing-banner {
+    display: table;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    color: white;
+    background: url(../images/landing/intro-bg.jpg) no-repeat bottom center scroll;
+    background-color: black;
+    @include cover();
+    .container {
+      display: table-cell;
+      vertical-align: middle;
+      .landing-title {
+        font-size: 25px;
+        font-family: $montserrat;
+      }
+    }
+  }
+  .landing-menu-blocks {
+    height: 50%;
+    .container,
+    .row {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    .blocks-container-center {
+      height: 50%;
+      padding: 0;
+      display: table;
+      .block-content {
+        cursor: pointer;
+        display: table-cell;
+        vertical-align: middle;
+        &.block-surfboards {
+          background: url('../images/landing/shop-surfboards.jpg')no-repeat center;
+          @include cover();
+        }
+        &.block-skateboards {
+          background: url('../images/landing/shop-skateboards.jpg')no-repeat center;
+          @include cover();
+        }
+        &.block-wetsuits {
+          background: url('../images/landing/shop-wetsuits.jpg')no-repeat center;
+          @include cover();
+        }
+        &.block-rentals {
+          background: url('../images/landing/shop-rentals.jpg')no-repeat center;
+          @include cover();
+        }
+        .block-categorie {
+          position: relative;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: $globalWhite;
+          font-family: $montserrat;
+          text-align: center;
+          @include transition(all 0.5s ease 0s);
+        }
+      }
+    }
+  }
+  @include respond-to(not_mobile) {
+    .landing-banner {
+      height: 70%;
+      .container {
+        .landing-title {
+          font-size: 30px;
+        }
+      }
+    }
+    .landing-menu-blocks {
+      height: 30%;
+      .blocks-container-center {
+        height: 100%;
+        .block-content {
+          @include grayscale(0);
+          @include transition(all 0.5s ease 0s);
+          &.block-surfboards,
+          &.block-skateboards,
+          &.block-wetsuits,
+          &.block-rentals {
+            background-size: 150%;
+            background-position: center;
+          }
+          &.block-surfboards {
+            background-position: top center;
+          }
+          &.block-wetsuits {
+            background-position: right;
+          }
+          .block-categorie {
+            font-size: 16px;
+            &:after {
+              content: '';
+              position: absolute;
+              left: calc(50% - 30px);
+              width: 60px;
+              height: 2px;
+              background: $globalWhite;
+              bottom: -5px;
+              @include scale(0);
+              @include transition(all 0.3s ease 0s);
+            }
+          }
+          &:hover {
+            @include grayscale(100%);
+            background-size: 180%;
+            .block-categorie::after {
+              @include scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

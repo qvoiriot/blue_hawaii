@@ -1,0 +1,9 @@
+#about {
+  display: none; }
+  #about.scroll-down {
+    display: block;
+    height: 800px;
+    width: 100%;
+    background: #000; }
+
+/*# sourceMappingURL=about.css.map */

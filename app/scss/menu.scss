@@ -1,0 +1,60 @@
+@import "variables";
+@import "includes/media-queries";
+@import "includes/mixin";
+
+
+.navbar-custom {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba($globalWhite, 0.3);
+  text-transform: uppercase;
+  font-family: $montserrat;
+  background-color: $globalBlack;
+  .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: $globalWhite;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+  .navbar-brand {
+    font-weight: 700;
+    &:focus {
+      outline: none;
+    }
+  }
+  a {
+    color: $globalWhite;
+  }
+  .nav {
+    li {
+      a {
+        @include transition(background 0.3s ease-in-out);
+        &:hover, &.active {
+          color: rgba($globalWhite, 0.8);
+          outline: none;
+          background-color: transparent;
+        }
+        &.active {
+          pointer-events: none;
+        }
+      }
+      &.hidden-nav {
+        display: none;
+      }
+    }
+  }
+  @include respond-to(menu_mobile) {
+    padding: 20px 0;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: transparent;
+    @include transition(background 0.5s ease-in-out,padding 0.5s ease-in-out);
+    &.top-nav-collapse {
+      padding: 0;
+      background: $globalBlack;
+      border-bottom: 1px solid rgba($globalWhite, 0.3);
+    }
+  }
+}

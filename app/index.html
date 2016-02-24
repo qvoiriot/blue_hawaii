@@ -36,21 +36,28 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand page-scroll" href="#page-top">
-                    Blue Hawaii
-                </a>
+        <a class="navbar-brand" data-anchor="#page-top">Blue Hawaii</a>
       </div>
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li class="hidden">
-            <a href="#page-top"></a>
+          <li class="hidden-nav">
+            <a class="page-scroll" data-anchor="#skateboards">Skateboards</a>
+          </li>
+          <li class="hidden-nav">
+            <a class="page-scroll" data-anchor="#surfboards">Surfboards</a>
+          </li>
+          <li class="hidden-nav">
+            <a class="page-scroll" data-anchor="#wetsuits">Wetsuits</a>
+          </li>
+          <li class="hidden-nav">
+            <a class="page-scroll" data-anchor="#rentals">School & Rentals</a>
           </li>
           <li>
-            <a class="page-scroll" href="#about">About</a>
+            <a class="page-scroll" data-anchor="#about">About</a>
           </li>
           <li>
-            <a class="page-scroll" href="#contact">Contact</a>
+            <a class="page-scroll" data-anchor="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -71,28 +78,28 @@
     <div class="landing-menu-blocks">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-xs-6 blocks-container-center">
+          <div class="col-md-3 col-xs-6 blocks-container-center page-scroll" data-anchor="#skateboards">
             <div class="block-content block-skateboards">
               <div class="block-categorie">
                 skateboards
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-xs-6 blocks-container-center">
+          <div class="col-md-3 col-xs-6 blocks-container-center page-scroll" data-anchor="#surfboards">
             <div class="block-content block-surfboards">
               <div class="block-categorie">
                 surfboards
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-xs-6 blocks-container-center">
+          <div class="col-md-3 col-xs-6 blocks-container-center page-scroll" data-anchor="#wetsuits">
             <div class="block-content block-wetsuits">
               <div class="block-categorie">
                 wetsuits
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-xs-6 blocks-container-center">
+          <div class="col-md-3 col-xs-6 blocks-container-center page-scroll" data-anchor="#rentals">
             <div class="block-content block-rentals">
               <div class="block-categorie">
                 surf-school<br/>
@@ -104,6 +111,20 @@
       </div>
     </div>
   </header>
+
+  <section id="surfboards"></section>
+
+  <section id="skateboards"></section>
+
+  <section id="wetsuits"></section>
+
+  <section id="rentals"></section>
+
+  <section id="about">
+
+  </section>
+
+  <section id="contact" class="hidden"></section>
 
 </body>
 <!--build:js js/script.min.js -->

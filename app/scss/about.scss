@@ -1,0 +1,14 @@
+@import "variables";
+@import "includes/media-queries";
+@import "includes/mixin";
+
+
+#about {
+  display: none;
+  &.scroll-down {
+    display: block;
+    height: 800px;
+    width: 100%;
+    background: $globalBlack;
+  }
+}
