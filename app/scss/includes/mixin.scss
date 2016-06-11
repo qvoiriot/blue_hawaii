@@ -69,7 +69,7 @@
 }
 @mixin respond-to($media) {
   @if $media == menu_mobile {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1025px) {
       @content;
     }
   }

@@ -1,8 +1,6 @@
 @import "variables";
 @import "includes/media-queries";
 @import "includes/mixin";
-
-
 .landing {
   position: relative;
   width: 100%;
@@ -42,6 +40,8 @@
         cursor: pointer;
         display: table-cell;
         vertical-align: middle;
+        @include grayscale(100%);
+        @include transition(all $timeAnim ease 0s);
         &.block-surfboards {
           background: url('../images/landing/shop-surfboards.jpg')no-repeat center;
           @include cover();
@@ -65,7 +65,24 @@
           color: $globalWhite;
           font-family: $montserrat;
           text-align: center;
-          @include transition(all 0.5s ease 0s);
+          @include transition(all $timeAnim ease 0s);
+          &:after {
+            content: '';
+            position: absolute;
+            left: calc(50% - 30px);
+            width: 60px;
+            height: 2px;
+            background: $globalWhite;
+            bottom: -5px;
+            @include scale(0);
+            @include transition(all $timeAnim ease 0s);
+          }
+        }
+        &:hover {
+          @include grayscale(0);
+          .block-categorie::after {
+            @include scale(1);
+          }
         }
       }
     }
@@ -84,8 +101,6 @@
       .blocks-container-center {
         height: 100%;
         .block-content {
-          @include grayscale(0);
-          @include transition(all 0.5s ease 0s);
           &.block-surfboards,
           &.block-skateboards,
           &.block-wetsuits,
@@ -101,21 +116,9 @@
           }
           .block-categorie {
             font-size: 16px;
-            &:after {
-              content: '';
-              position: absolute;
-              left: calc(50% - 30px);
-              width: 60px;
-              height: 2px;
-              background: $globalWhite;
-              bottom: -5px;
-              @include scale(0);
-              @include transition(all 0.3s ease 0s);
-            }
           }
           &:hover {
-            @include grayscale(100%);
-            background-size: 180%;
+            @include grayscale(0);
             .block-categorie::after {
               @include scale(1);
             }

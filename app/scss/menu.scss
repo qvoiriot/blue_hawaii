@@ -45,6 +45,7 @@
       }
     }
   }
+  // not showing black bar over 1024px (ipad-landscape)
   @include respond-to(menu_mobile) {
     padding: 20px 0;
     border-bottom: none;

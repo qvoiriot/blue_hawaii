@@ -35,7 +35,14 @@
       .landing .landing-menu-blocks .blocks-container-center .block-content {
         cursor: pointer;
         display: table-cell;
-        vertical-align: middle; }
+        vertical-align: middle;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s; }
         .landing .landing-menu-blocks .blocks-container-center .block-content.block-surfboards {
           background: url("../images/landing/shop-surfboards.jpg") no-repeat center;
           -webkit-background-size: cover;
@@ -67,10 +74,37 @@
           color: #fff;
           font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
           text-align: center;
-          -webkit-transition: all 0.5s ease 0s;
-          -moz-transition: all 0.5s ease 0s;
-          -o-transition: all 0.5s ease 0s;
-          transition: all 0.5s ease 0s; }
+          -webkit-transition: all 0.3s ease 0s;
+          -moz-transition: all 0.3s ease 0s;
+          -o-transition: all 0.3s ease 0s;
+          transition: all 0.3s ease 0s; }
+          .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie:after {
+            content: '';
+            position: absolute;
+            left: calc(50% - 30px);
+            width: 60px;
+            height: 2px;
+            background: #fff;
+            bottom: -5px;
+            -moz-transform: scale(0);
+            -o-transform: scale(0);
+            -ms-transform: scale(0);
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content:hover {
+          -webkit-filter: grayscale(0);
+          -moz-filter: grayscale(0);
+          filter: grayscale(0); }
+          .landing .landing-menu-blocks .blocks-container-center .block-content:hover .block-categorie::after {
+            -moz-transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1); }
   @media only screen and (min-width: 769px) {
     .landing .landing-banner {
       height: 70%; }
@@ -80,50 +114,24 @@
       height: 30%; }
       .landing .landing-menu-blocks .blocks-container-center {
         height: 100%; }
-        .landing .landing-menu-blocks .blocks-container-center .block-content {
+        .landing .landing-menu-blocks .blocks-container-center .block-content.block-surfboards, .landing .landing-menu-blocks .blocks-container-center .block-content.block-skateboards, .landing .landing-menu-blocks .blocks-container-center .block-content.block-wetsuits, .landing .landing-menu-blocks .blocks-container-center .block-content.block-rentals {
+          background-size: 150%;
+          background-position: center; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content.block-surfboards {
+          background-position: top center; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content.block-wetsuits {
+          background-position: right; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie {
+          font-size: 16px; }
+        .landing .landing-menu-blocks .blocks-container-center .block-content:hover {
           -webkit-filter: grayscale(0);
           -moz-filter: grayscale(0);
-          filter: grayscale(0);
-          -webkit-transition: all 0.5s ease 0s;
-          -moz-transition: all 0.5s ease 0s;
-          -o-transition: all 0.5s ease 0s;
-          transition: all 0.5s ease 0s; }
-          .landing .landing-menu-blocks .blocks-container-center .block-content.block-surfboards, .landing .landing-menu-blocks .blocks-container-center .block-content.block-skateboards, .landing .landing-menu-blocks .blocks-container-center .block-content.block-wetsuits, .landing .landing-menu-blocks .blocks-container-center .block-content.block-rentals {
-            background-size: 150%;
-            background-position: center; }
-          .landing .landing-menu-blocks .blocks-container-center .block-content.block-surfboards {
-            background-position: top center; }
-          .landing .landing-menu-blocks .blocks-container-center .block-content.block-wetsuits {
-            background-position: right; }
-          .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie {
-            font-size: 16px; }
-            .landing .landing-menu-blocks .blocks-container-center .block-content .block-categorie:after {
-              content: '';
-              position: absolute;
-              left: calc(50% - 30px);
-              width: 60px;
-              height: 2px;
-              background: #fff;
-              bottom: -5px;
-              -moz-transform: scale(0);
-              -o-transform: scale(0);
-              -ms-transform: scale(0);
-              -webkit-transform: scale(0);
-              transform: scale(0);
-              -webkit-transition: all 0.3s ease 0s;
-              -moz-transition: all 0.3s ease 0s;
-              -o-transition: all 0.3s ease 0s;
-              transition: all 0.3s ease 0s; }
-          .landing .landing-menu-blocks .blocks-container-center .block-content:hover {
-            -webkit-filter: grayscale(100%);
-            -moz-filter: grayscale(100%);
-            filter: grayscale(100%);
-            background-size: 180%; }
-            .landing .landing-menu-blocks .blocks-container-center .block-content:hover .block-categorie::after {
-              -moz-transform: scale(1);
-              -o-transform: scale(1);
-              -ms-transform: scale(1);
-              -webkit-transform: scale(1);
-              transform: scale(1); } }
+          filter: grayscale(0); }
+          .landing .landing-menu-blocks .blocks-container-center .block-content:hover .block-categorie::after {
+            -moz-transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 /*# sourceMappingURL=landing.css.map */
