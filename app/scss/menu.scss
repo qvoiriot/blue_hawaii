@@ -46,7 +46,7 @@
     }
   }
   // not showing black bar over 1024px (ipad-landscape)
-  @include respond-to(menu_mobile) {
+  @include respond-to(menu_desktop) {
     padding: 20px 0;
     border-bottom: none;
     letter-spacing: 1px;

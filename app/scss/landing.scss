@@ -87,6 +87,10 @@
       }
     }
   }
+  @include respond-to(mobile_or_tablet) {
+    top: $mobileMenuHeight;
+    height: calc( 100% - #{$mobileMenuHeight});
+  }
   @include respond-to(not_mobile) {
     .landing-banner {
       height: 70%;

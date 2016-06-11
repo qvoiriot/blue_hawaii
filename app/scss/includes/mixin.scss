@@ -68,8 +68,18 @@
   filter:blur($px);
 }
 @mixin respond-to($media) {
-  @if $media == menu_mobile {
+  @if $media == menu_desktop {
     @media only screen and (min-width: 1025px) {
+      @content;
+    }
+  }
+  @if $media == not_mobile {
+    @media only screen and (min-width: 769px) {
+      @content;
+    }
+  }
+  @if $media == mobile_or_tablet {
+    @media only screen and (max-width: 1024px) {
       @content;
     }
   }
@@ -85,11 +95,6 @@
   }
   @else if $media == mobile_landscape {
     @media only screen and (orientation: landscape) and (max-width: 768px) {
-      @content;
-    }
-  }
-  @if $media == not_mobile {
-    @media only screen and (min-width: 769px) {
       @content;
     }
   }
