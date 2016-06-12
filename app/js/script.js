@@ -95,6 +95,7 @@
 
     goToTop: function() {
       $('.navbar-brand').on('click', function() {
+        console.log('toto');
         $('html,body').stop(true).animate({
           scrollTop: 0
         }, 1200, 'easeInOutExpo');
