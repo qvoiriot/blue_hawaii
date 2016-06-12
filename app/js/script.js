@@ -72,6 +72,7 @@
     },
 
     navigationActions: function() {
+      var self=this;
       $('.page-scroll').bind('click', function(event) {
         var $anchor = $(this).attr('data-anchor');
         var $delta_mobile = 0;
@@ -82,7 +83,7 @@
         $(this).addClass('active');
         $($anchor).addClass('scroll-down');
 
-        if (!this.is_desktop) {
+        if (!self.is_desktop) {
           $delta_mobile = site.mobile_nav_height;
         }
 
