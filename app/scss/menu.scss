@@ -1,8 +1,6 @@
 @import "variables";
 @import "includes/media-queries";
 @import "includes/mixin";
-
-
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid rgba($globalWhite, 0.3);
@@ -31,7 +29,8 @@
     li {
       a {
         @include transition(background 0.3s ease-in-out);
-        &:hover, &.active {
+        &:hover,
+        &.active {
           color: rgba($globalWhite, 0.8);
           outline: none;
           background-color: transparent;
@@ -42,6 +41,15 @@
       }
       &.hidden-nav {
         display: none;
+      }
+    }
+  }
+  @include respond-to(tablet_portrait) {
+    .nav{
+      li {
+        a {
+          font-size: 10px;
+        }
       }
     }
   }
